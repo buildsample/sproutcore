@@ -6,7 +6,7 @@ rvm:
 install: true
 
 before_script:
-  - ./scripts/run_sc_server_master.sh
+  - ./scripts/run_sc_server_master.sh &
   - sleep 5 # give sc-server some time to start
 
 script: phantomjs phantomjs/test_runner.js --no-experimental --exclude-targets=/sproutcore/greenhouse
